@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #020617; /* Slate 950 */
+  --color-surface-container: rgba(255, 255, 255, 0.05);
+  --color-surface-container-low: rgba(255, 255, 255, 0.03);
+  --color-surface-container-high: rgba(255, 255, 255, 0.1);
+  --color-surface-container-highest: rgba(255, 255, 255, 0.2);
+  --color-surface-container-lowest: rgba(15, 23, 42, 0.8); /* Slate 900 translucent */
+  
+  --color-primary: #4f46e5; /* Indigo 600 */
+  --color-primary-container: #7c3aed; /* Purple 600 */
+  --color-on-primary: #ffffff;
+  
+  --color-on-surface: #f8fafc; /* Slate 50 */
+  --color-on-surface-variant: #94a3b8; /* Slate 400 */
+  
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+    background-color: #020617;
+  }
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.glass-nav {
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.ambient-shadow {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.mesh-gradient-purple {
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.3) 0%, transparent 70%);
+}
+
+.mesh-gradient-blue {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+}
+
+.mesh-gradient-orange {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+}
